@@ -1,0 +1,50 @@
+@use 'sass:color';
+
+div.box {
+  padding: 0.5em;
+}
+
+span.quelle {
+  color: #00f;
+  font-size: 0.6em;
+}
+
+.space {
+  margin-bottom: 2em;
+}
+
+$myColor: #aaa;
+$steps: 10%;
+
+div.box1 {
+  background-color: $myColor;
+}
+
+div.box2 {
+  background-color: color.adjust($myColor, $lightness: $steps);
+}
+
+div.box3 {
+  background-color: color.adjust($myColor, $lightness: $steps*2);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: #000;
+}
+
+.carousel {
+  .carousel-item {
+    height: 100px;
+    text-align: center;
+
+    img {
+      max-height: 100px;
+      transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/**
+*.odt
+/website/node_modules
+website/package-lock.json
+/website/css
+6KL Inf.code-workspace
